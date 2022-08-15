@@ -14,20 +14,20 @@ class GuessingGame {
 
     guess() {
 
-        return Math.floor((this.right - this.left) / 2); 
+        return Math.round((this.right + this.left) / 2); 
 
     }
 
     lower() {
 
-        this.max = this.guess();
+        this.right = Math.round(this.guess());
         
     
     }
 
     greater() {
 
-        this.min = this.guess();
+        this.left = Math.floor(this.guess());
 
     }
 }
